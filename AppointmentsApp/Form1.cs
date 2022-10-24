@@ -29,6 +29,9 @@ namespace AppointmentsApp {
         public Form1()
         {
             InitializeComponent();
+
+            this.Icon = AppointmentsApp.Properties.Resources.alarm;
+
             //set the bindingsource datasource to be the appointments list so changes to the list reflect in the data grid view
             appointmentsBS.DataSource = appointments;             
 

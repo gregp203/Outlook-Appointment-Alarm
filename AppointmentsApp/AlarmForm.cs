@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppointmentsApp.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +39,7 @@ namespace AppointmentsApp {
         public AlarmForm(Outlook.AppointmentItem outlookApptItem)
         {
             InitializeComponent();
+            this.Icon = AppointmentsApp.Properties.Resources.alarm;
             _outlookApptItem = outlookApptItem;
             simpleSound = new SoundPlayer(@"c:\windows\Media\Alarm10.wav");
             simpleSound.PlayLooping();
