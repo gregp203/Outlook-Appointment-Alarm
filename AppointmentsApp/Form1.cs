@@ -152,6 +152,12 @@ namespace AppointmentsApp {
                     if (!found) { appointments.RemoveAt(i); }    
                 }
             }
+
+            //sort list by start time
+            appointments.Sort(delegate (Appointment x, Appointment y)
+            {
+                return x.startTime.CompareTo(y.startTime);
+            });
         }
 
         //taken from https://learn.microsoft.com/en-us/office/client-developer/outlook/pia/how-to-search-and-obtain-appointments-in-a-time-range
